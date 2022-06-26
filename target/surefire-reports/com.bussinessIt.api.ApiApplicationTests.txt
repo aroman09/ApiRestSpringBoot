@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.bussinessIt.api.ApiApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.36 s - in com.bussinessIt.api.ApiApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.548 s - in com.bussinessIt.api.ApiApplicationTests

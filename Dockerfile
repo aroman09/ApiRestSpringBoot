@@ -1,13 +1,4 @@
-FROM maven:3.6.3-openjdk-11-slim as BUILDER
-ARG VERSION=0.0.1-SNAPSHOT
-WORKDIR /build/
-COPY pom.xml /build/
-COPY src /build/src
-RUN mvn clean package
-COPY target/CrudApiBIT-${VERSION}.jar target/application.jar
-
-FROM openjdk:11.0.15-jre-slim
-WORKDIR /app/
-
-COPY --from=BUILDER /build/target/application.jar /app/
-CMD java -jar /app/application.jar
+FROM maven:3.8.1-jdk-11
+EXPOSE 8080
+ADD target/crudapibit-docker.jar crudapibit-docker.jar
+ENTRYPOINT ["java","-jar","/crudapibit-docker.jar"]
